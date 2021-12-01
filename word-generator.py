@@ -21,7 +21,7 @@ def add_char(partial):
     else:
         raise Exception('Can\'t add character')
 
-def generate_word1(partial=''):
+def generate_word(partial=''):
     new = add_char(partial)
     if len(new) > 5:
         if new[-1] in illegal_lasts:
@@ -40,7 +40,7 @@ def word_class(word):
     ]
     return classes[hash(word) % len(classes)]
 
-words = [generate_word1() for _ in range(10)]
+words = [generate_word() for _ in range(10)]
 table = [(i, word_class(i)) for i in words]
 
 pprint(table)
