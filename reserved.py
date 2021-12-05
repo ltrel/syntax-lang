@@ -1,3 +1,5 @@
 reserved_words = [
-    'fo'
+    'fo',
+    'tu',
+    'to',
 ]
