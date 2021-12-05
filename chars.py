@@ -7,4 +7,4 @@ consonants = string.ascii_lowercase.translate(
 letters = vowels + consonants
 illegal_lasts = 'rh'
 last_replacements = consonants.translate(
-    str.maketrans('', '', illegal_consonants))
+    str.maketrans('', '', illegal_lasts))
