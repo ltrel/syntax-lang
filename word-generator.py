@@ -1,6 +1,7 @@
 import random
 from pprint import pprint
 import chars
+from reserved import reserved_words
 
 
 def add_char(partial):
@@ -26,6 +27,8 @@ def generate_word():
     word = generator(length, '')
     if word[-1] in chars.illegal_lasts:
         word = word[:-1] + random.choice(chars.last_replacements)
+    if word in reserved_words:
+        word = generate_word()
     return word
 
 
@@ -40,7 +43,7 @@ def word_class(word):
     return classes[hash(word) % len(classes)]
 
 
-words = [generate_word() for _ in range(10)]
+words = [generate_word() for _ in range(1000)]
 table = [(i, word_class(i)) for i in words]
 
 pprint(table)

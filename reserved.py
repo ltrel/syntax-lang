@@ -1,0 +1,3 @@
+reserved_words = [
+    'fo'
+]
