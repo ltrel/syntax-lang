@@ -41,3 +41,34 @@ An adjective block is a set of one or more adjective phrases joined together. Th
 ```[(converter noun-phrase fo) (adjective)]```
 
 ```[(converter noun-phrase [adjective])]```
+
+### `tu` Conversion
+The reserved word `tu` can be used to form more abstract nouns from either an adjective block or grammatical sentence. Sentences contained within a `tu` conversion are not required to have a subject noun phrase. The construction is terminated with `to` to prevent ambiguity.
+
+```tu adjective-block to```
+
+```tu noun-phrase verb-phrase to```
+
+```tu verb-phrase to```
+
+### Noun Phrase
+A noun phrase consists of a noun and optionally an adjective block describing it. The noun may be a single word from the noun word class or a noun formed through `tu` conversion.
+
+```noun```
+
+```noun adjective-block```
+
+### Verb Phrase
+A verb phrase consists of a verb, an optional adjective block, and an optional noun phrase expressing the verb's object. The components must appear in that order.
+
+```verb```
+
+```verb adjective-block```
+
+```verb adjective-block noun-phrase```
+
+```verb noun-phrase```
+
+### Sentence
+A sentence consists of a noun phrase expressing the subject followed by a verb phrase expressing the predicate.
+```noun-phrase verb-phrase.```
