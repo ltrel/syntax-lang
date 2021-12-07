@@ -2,7 +2,7 @@
 ## Reserved Defined Words
 | Word | Function                                          |
 | :--- | :------------------------------------------------ |
-| fo   | Terminates an adjective block                     |
+| fo   | Terminates a noun phrase or verb phrase           |
 | tu   | Converts an adjective block or sentence to a noun |
 | to   | Terminates 'tu'                                   |
 
@@ -24,8 +24,12 @@ An adjective phrase conveys a single attribute or relationship of a noun or verb
 ```converter noun-phrase (modifier)```
 
 ### Adjective Block
-An adjective block is a set of one or more adjective phrases joined together. This construction may immediately follow the noun or verb in noun and verb phrases respectively. An adjective block may be explicitly terminated using `fo`. This is often necessary when an adjective phrase formed through conversion is followed by another adjective phrase. For example:
+An adjective block is a set of one or more adjective phrases joined together. This construction may immediately follow the noun or verb in noun and verb phrases respectively. When an adjective block contains an adjective phrase formed through conversion followed by another adjective phrase, it is necessary to use `fo` to explicitly terminate the noun phrase being converted. If `fo` is omitted, the adjective phrase that follows will instead bind to the adjective block of the converted noun phrase. Here are some examples with the boundaries of adjective blocks and phrases shown using square brackets and parentheses respectively.
 
-```converter noun-phrase fo adjective```
+```[(adjective) (adjective)]```
 
-If the `fo` in this example was omitted, the final adjective would become a part of the converted noun phrase's adjective block rather than the top-level adjective block.
+```[(adjective modifier) (adjective)]```
+
+```[(converter noun-phrase fo) (adjective)]```
+
+```[(converter noun-phrase [adjective])]```
