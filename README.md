@@ -1,4 +1,12 @@
 # SyntaxLang
+## Phonological Features
+This list is incomplete and currently contains only the consonant pronunciations that are not always consistent with English
+- `c` is pronounced as `/tʃ/` (the `ch` sound in `chip`)
+- `g` is pronounced as `/g/` (the `g` sound in `glass`)
+- `x` is pronounced as `/ʒ/` (the `g` sound in `genre`)
+- `j` is pronounced as `/dʒ/` (the `j` sound in `jar`)
+
+
 ## Reserved Defined Words
 | Word | Function                                          |
 | :--- | :------------------------------------------------ |
